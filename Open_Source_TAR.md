@@ -32,29 +32,29 @@ R does this (shown above) and it can be applied to documents. Let’s take a loo
 
 First, I’m going to create a simple test corpus consisting of nine short email excerpts from the original Enron corpus. The samples will pertain to three semantically diverse topics:
 
-#Topic 1
+###Topic 1
 
-(1) “To Mr. Ken Lay, I’m writing to urge you to donate the millions of dollars you made from selling Enron stock before the company declared bankruptcy.”
+1. “To Mr. Ken Lay, I’m writing to urge you to donate the millions of dollars you made from selling Enron stock before the company declared bankruptcy.”
 
-(2) “while you netted well over a $100 million, many of Enron’s employees were financially devastated when the company declared bankruptcy and their retirement plans were wiped out”
+2. “while you netted well over a $100 million, many of Enron’s employees were financially devastated when the company declared bankruptcy and their retirement plans were wiped out”
 
-(3) “you sold $101 million worth of Enron stock while aggressively urging the company’s employees to keep buying it”
+3. “you sold $101 million worth of Enron stock while aggressively urging the company’s employees to keep buying it”
 
-Topic 2
+###Topic 2
 
-(4) “This is a reminder of Enron’s Email retention policy. The Email retention policy provides as follows . . . “
+4. “This is a reminder of Enron’s Email retention policy. The Email retention policy provides as follows . . . “
 
-(5) ”Furthermore, it is against policy to store Email outside of your Outlook Mailbox and/or your Public Folders. Please do not copy Email onto floppy disks, zip disks, CDs or the network.”
+5. ”Furthermore, it is against policy to store Email outside of your Outlook Mailbox and/or your Public Folders. Please do not copy Email onto floppy disks, zip disks, CDs or the network.”
 
-(6) ”Based on our receipt of various subpoenas, we will be preserving your past and future email. Please be prudent in the circulation of email relating to your work and activities.”
+6. ”Based on our receipt of various subpoenas, we will be preserving your past and future email. Please be prudent in the circulation of email relating to your work and activities.”
 
-Topic 3
+###Topic 3
 
-(7) “We have recognized over $550 million of fair value gains on stocks via our swaps with Raptor.”
+7. “We have recognized over $550 million of fair value gains on stocks via our swaps with Raptor.”
 
-(8) “The Raptor accounting treatment looks questionable. a. Enron booked a $500 million gain from equity derivatives from a related party.”
+8. “The Raptor accounting treatment looks questionable. a. Enron booked a $500 million gain from equity derivatives from a related party.”
 
-(9) “In the third quarter we have a $250 million problem with Raptor 3 if we don’t “enhance” the capital structure of Raptor 3 to commit more ENE shares.”
+9. “In the third quarter we have a $250 million problem with Raptor 3 if we don’t “enhance” the capital structure of Raptor 3 to commit more ENE shares.”
 
 
 
