@@ -16,6 +16,50 @@ So is there a way that lawyers without the resources to use TAR software or hire
 
 I believe there is and it is in the form of open source software. Open source software is software whose source code is available for modification or enhancement by anyone. It is usually free and worked on by large communities of developers working collaboratively to constantly improve the product and offer support to the software’s users. There are a lot of examples of open source software out there (Firefox, Linux, OpenOffice, etc.), but the one that I think has a lot of potential for use in e-discovery is the R Project for Statistical Computing.
 
+According to RevolutionAnalytics.com:
+
+> R is the world’s most powerful programming language for statistical computing, machine learning and graphics as well as a thriving global community of users, developers and contributors. R includes virtually every data manipulation, statistical model, and chart that the modern data scientist could ever need. As a thriving open-source project, R is supported by a community of more than 2 million users and thousands of developers worldwide. Whether you’re using R to optimize portfolios, analyze genomic sequences, or to predict component failure times, experts in every domain have made resources, applications and code available for free, online.
+
+And it is applicable to e-discovery. How? E-discovery platforms and providers are essentially doing the same thing R is doing: Statistics. Whether locating ESI, using predictive-coding to search for relevant documents, or doing something as simple as de-duping a corpus, statistics is the driving-force behind e-discovery solutions . . . unless your solution is having your firm’s associate(s) read through documents or outsourcing the work, offshore or otherwise.
+
+So let’s look at a very simple example of how R might be used to analyze and manage documents:
+
+Document clustering is a popular method of TAR, especially when dealing with a large corpus. In particular, clustering allows for more efficient review by quickly revealing relationships and connections within a set that may not otherwise be apparent and by identifying duplicate documents within a set. Within the broader context of data science, clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters).
+
+![PIC](http://upload.wikimedia.org/wikipedia/commons/thumb/0/09/ClusterAnalysis_Mouse.svg/450px-ClusterAnalysis_Mouse.svg.png)
+
+R does this (shown above) and it can be applied to documents. Let’s take a look at a simple example using R (downloadable here) and RStudio (an IDE interface to make R more user-friendly – downloadable here). I am going to just get straight into the code, but if you are new to R, check out Professor Katz’s “R Boot Camp Slides” – that’s how I learned!
+
+First, I’m going to create a simple test corpus consisting of nine short email excerpts from the original Enron corpus. The samples will pertain to three semantically diverse topics:
+
+#Topic 1
+
+(1) “To Mr. Ken Lay, I’m writing to urge you to donate the millions of dollars you made from selling Enron stock before the company declared bankruptcy.”
+
+(2) “while you netted well over a $100 million, many of Enron’s employees were financially devastated when the company declared bankruptcy and their retirement plans were wiped out”
+
+(3) “you sold $101 million worth of Enron stock while aggressively urging the company’s employees to keep buying it”
+
+Topic 2
+
+(4) “This is a reminder of Enron’s Email retention policy. The Email retention policy provides as follows . . . “
+
+(5) ”Furthermore, it is against policy to store Email outside of your Outlook Mailbox and/or your Public Folders. Please do not copy Email onto floppy disks, zip disks, CDs or the network.”
+
+(6) ”Based on our receipt of various subpoenas, we will be preserving your past and future email. Please be prudent in the circulation of email relating to your work and activities.”
+
+Topic 3
+
+(7) “We have recognized over $550 million of fair value gains on stocks via our swaps with Raptor.”
+
+(8) “The Raptor accounting treatment looks questionable. a. Enron booked a $500 million gain from equity derivatives from a related party.”
+
+(9) “In the third quarter we have a $250 million problem with Raptor 3 if we don’t “enhance” the capital structure of Raptor 3 to commit more ENE shares.”
+
+
+
+
+
 # Load requisite packages
 library(tm)
 library(ggplot2)
