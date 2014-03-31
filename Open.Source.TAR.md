@@ -1,5 +1,7 @@
 ##Open Source Technology Assisted Review . . . FOR FREE!
 
+####Patrick Ellis
+
 Consumers of e-discovery and document management services and products are at an inherent disadvantage. Costs are unpredictable, information is asymmetric, and technology is constantly changing. At the same time, electronic data, both structured and unstructured, is growing at an exponential rate and so is the need for faster, more efficient, and intelligent information management and e-discovery solutions. Whether you are General Counsel with a large organization or a solo practitioner, an understanding of the identification, production, storage, and deletion of electronic information and the ability to analyze that information is crucial for assessing potential risk or litigating a case moving forward, i.e. being a lawyer.
 
 But some lawyers are at a greater disadvantage than others.
