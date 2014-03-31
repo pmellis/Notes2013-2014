@@ -1,5 +1,8 @@
 Paired Programming for Agile Lawyers?
 ======================================
+
+####Patrick Ellis
+
 In my recent, limited, and recreational study of software development, I’ve come across a lot of concepts that were, for lack of a better word, strange. That is not to say that they are bad. Just the opposite. In fact, learning about different methodologies has really got my gears turning about some of the processes that are commonly used in legal practice, or even in my own studies. Nevertheless, it can be difficult to try and borrow software dev approaches and imagine them applied in legal practice. I think the cultural differences between the industries, perhaps stereotypical differences, may be partially responsible. With a little imagination, however, it can be done;  SeyfarthLean being one great example.
 
 One idea that has really stuck with me the past couple days (after reading this article) comes from the agile development school of thought, more specifically, the extreme programming methodology: paired programming. Paired programming is essentially the idea that pairs of programmers work so closely together that one can pick up or modify the work of their partner at any time. Advocates of paired programming insist that this method produces more code in the long-run when compared to programmers who work individually. This is a question that seemingly remains up for debate.
