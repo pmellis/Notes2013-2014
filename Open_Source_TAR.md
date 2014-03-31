@@ -134,15 +134,15 @@ This outcome is dramatically different from the first analysis. As the graph sho
 
 If the results of this mini-Enron test might not persuade you that R is an viable alternative to e-discovery software or vendors, that is my fault. I have only been using R for a couple months now and am still learning how to effectively use it. But, if my example is not persuasive, there is a huge community of developers out there working with R to develop text-mining and document analysis solutions that can sell it better than I can. For example:
 
-- Here is an example of a person using R to mine the complete works of William Shakespeare;
-- Here is an example and video using R to predict the author of a document based on machine learning from previous documents; and
-- Here is a much more persuasive example of clustering using R with, again, the complete works of William Shakespeare.
+- [Here](http://www.r-bloggers.com/text-mining-the-complete-works-of-william-shakespeare/) is an example of a person using R to mine the complete works of William Shakespeare;
+- [Here](http://bostondecision.com/2012/05/14/the-text-classifier-determine-the-author-of-a-document-with-machine-learning-in-r/) is an example using R to predict the author of a document based on machine learning from previous documents; and
+- [Here](http://www.r-bloggers.com/clustering-the-words-of-william-shakespeare/) is a much more persuasive example of clustering using R with, again, the complete works of William Shakespeare.
 
 These are just a few of the hundreds if not thousands of functions that can be performed on a document set in R and, because it’s open source, there are constantly new techniques in development.
 
 At the end of the day, R comes with a serious learning curve and it simply is not as effective (at least in my hands) as a traditional TAR platform. But, as it continues to develop and lawyers and programmers alike realize its potential in the e-discovery and document management space, I bet that it will become an effective tool for lawyers, even outside of the context of information management. Oh, and one more thing:
 
-It’s free.
+**It’s free.**
 
 So for attorneys out there with limited financial resources, R may be an excellent tool for overcoming the divide that electronic information is creating. Therefore, I look forward to continue learning R and its potential to make legal processes more affordable, more efficient, and more intelligent.
 
