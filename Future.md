@@ -1,5 +1,6 @@
 Seeing the Future
 ==================
+####Patrick Ellis
 ![pic](http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg)
 
 *The future is already here. It’s just not evenly distributed yet.*
