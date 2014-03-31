@@ -56,10 +56,9 @@ First, I’m going to create a simple test corpus consisting of nine short email
 
 9. “In the third quarter we have a $250 million problem with Raptor 3 if we don’t “enhance” the capital structure of Raptor 3 to commit more ENE shares.”
 
+Now that we have our documents, we can create our corpus in R Studio. We will do so by first placing all of our sample documents into a vector, “text”, and then cleaning the text (remove stopwords, stemming, etc.) within the corpus. This is accomplished with the following code:
 
-
-
-
+```{r}
 # Load requisite packages
 library(tm)
 library(ggplot2)
@@ -87,9 +86,15 @@ corpus <- tm_map(corpus, removePunctuation)
 corpus <- tm_map(corpus, function(x) removeWords(x, stopwords("english")))
 corpus <- tm_map(corpus, stemDocument, language = "english")
 corpus  # check corpus
+```
 
+```
 # Mini-Enron corpus with 9 text documents
+```
 
+Now that we have our mini-Enron corpus, we can create we can a “term-document matrix” that contains and measures the occurrence of certain terms within each document. Then we can use a statistical technique known as multidimensional scaling, a means of visualizing the level of similarity of individual documents within a corpus, to view our “clusters”. We will create our graph using ggplot2, a data visualization package for R:
+
+```{r}
 # Compute a term-document matrix that contains occurrance of terms in each email
 # Compute distance between pairs of documents and scale the multidimentional semantic space (MDS) onto two dimensions
 td.mat <- as.matrix(TermDocumentMatrix(corpus))
@@ -101,9 +106,15 @@ fit <- cmdscale(dist.mat, eig = TRUE, k = 2)
 points <- data.frame(x = fit$points[, 1], y = fit$points[, 2])
 ggplot(points, aes(x = x, y = y)) + geom_point(data = points, aes(x = x, y = y, 
     color = df$view)) + geom_text(data = points, aes(x = x, y = y - 0.2, label = row.names(df)))
+```
+
+![PLOT](http://patellis.files.wordpress.com/2013/12/untitled1.png?w=960)
     
-# Results are acceptable. Let's try with Latent Semantic Analysis (LSA).
+As you can see, the “documents” are positioned on the graph according to semantic similarity. In other words, they are “clustered”. Topic 1 documents are tightly grouped, while Topic 2 and 3 documents are more loosely grouped or clustered. It’s not perfect, but it’s a start.
+
+Another R package, called LSA, might improve our accuracy. LSA, which stands for latent semantic analysis, is an algorithm applied to approximate the meaning of texts, thereby exposing semantic structure to computation. LSA is commonly used by e-discovery platforms and an effective way of grouping documents. LSA should produce superior results because we can “weight” the text and compute distance more effectively. Again, we can display these results graphically.
     
+```{r}    
 # MDS with LSA
 td.mat.lsa <- lw_bintf(td.mat) * gw_idf(td.mat)  # weighting
 lsaSpace <- lsa(td.mat.lsa)  # create LSA space
@@ -115,3 +126,23 @@ fit <- cmdscale(dist.mat.lsa, eig = TRUE, k = 2)
 points <- data.frame(x = fit$points[, 1], y = fit$points[, 2])
 ggplot(points, aes(x = x, y = y)) + geom_point(data = points, aes(x = x, y = y, 
     color = df$view)) + geom_text(data = points, aes(x = x, y = y - 0.2, label = row.names(df)))
+```   
+
+![PLOT](http://patellis.files.wordpress.com/2013/12/untitled2.png?w=960)
+
+This outcome is dramatically different from the first analysis. As the graph shows, the documents in Topic 3 were pulled down the y-axis quite substantially, while Topic 2 expanded in distance. Topic 3 is not really clustered, although it is obviously distinct from the other Topics. I suspect that my mini-Enron corpus did not have the kind of variety that is really required for the LSA to truly show its computing power and produce robust clusters.
+
+If the results of this mini-Enron test might not persuade you that R is an viable alternative to e-discovery software or vendors, that is my fault. I have only been using R for a couple months now and am still learning how to effectively use it. But, if my example is not persuasive, there is a huge community of developers out there working with R to develop text-mining and document analysis solutions that can sell it better than I can. For example:
+
+- Here is an example of a person using R to mine the complete works of William Shakespeare;
+- Here is an example and video using R to predict the author of a document based on machine learning from previous documents; and
+- Here is a much more persuasive example of clustering using R with, again, the complete works of William Shakespeare.
+
+These are just a few of the hundreds if not thousands of functions that can be performed on a document set in R and, because it’s open source, there are constantly new techniques in development.
+
+At the end of the day, R comes with a serious learning curve and it simply is not as effective (at least in my hands) as a traditional TAR platform. But, as it continues to develop and lawyers and programmers alike realize its potential in the e-discovery and document management space, I bet that it will become an effective tool for lawyers, even outside of the context of information management. Oh, and one more thing:
+
+It’s free.
+
+So for attorneys out there with limited financial resources, R may be an excellent tool for overcoming the divide that electronic information is creating. Therefore, I look forward to continue learning R and its potential to make legal processes more affordable, more efficient, and more intelligent.
+
