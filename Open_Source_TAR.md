@@ -1,0 +1,73 @@
+##Open Source Technology Assisted Review . . . FOR FREE!
+
+Consumers of e-discovery and document management services and products are at an inherent disadvantage. Costs are unpredictable, information is asymmetric, and technology is constantly changing. At the same time, electronic data, both structured and unstructured, is growing at an exponential rate and so is the need for faster, more efficient, and intelligent information management and e-discovery solutions. Whether you are General Counsel with a large organization or a solo practitioner, an understanding of the identification, production, storage, and deletion of electronic information and the ability to analyze that information is crucial for assessing potential risk or litigating a case moving forward, i.e. being a lawyer.
+
+But some lawyers are at a greater disadvantage than others.
+
+For instance, a few weeks ago, a criminal defense attorney spoke at MSU Law and discussed how e-discovery influences his work. To me, his message and its implications for his clients were bleak. E-discovery not only impacts his work, but more importantly, can mean the difference between a “guilty” and “not guilty” verdict for his clients. In cases where electronic information is an issue, this defense attorney does his best to work with his resources, the client, and the court to obtain any relevant evidence that may help his client’s case. Yet, access to a lot of potential electronic evidence, a deleted text message for example, requires the expensive work of a computer forensics expert or some other burdensome method of retrieval.
+
+Even more common and perhaps more taxing to this attorney, a solo practitioner, is receiving hundreds if not thousands of documents related to a case and manually reviewing them. Even something as simple as locating duplicate documents can take hours, if not days. The majority of clients this attorney represents cannot afford technology assisted review (“TAR”), leaving their case to the mercy of human error and time limitations. (For more on e-discovery and criminal law, check out E-Discovery in Criminal Cases: A Need for Specific Rules, by Daniel B. Garrie & Daniel K. Gelb).
+
+I assume that some of the problems encountered by this criminal defense attorney are also common for small firm and solo-practitioners on the civil side, often buried in electronic information without the resources to contract a vendor or implement a TAR platform. In sum, the proliferation of electronic information is creating a divide for attorneys: those who have the tools and resources to handle and effectively analyze it, and those who do not.
+
+This past year, I’ve had the opportunity to experiment with a few different document review platforms, including Concordance, Clustify, and Backstop through my e-discovery class at MSU. Although I do not have much to compare these programs to, I thought they all worked well. Clustify and Backstop were much more intuitive and powerful, but nonetheless, each allowed me to perform certain tasks that would otherwise have been time-consuming and expensive within minutes: de-duping, clustering, searches, predictive coding, etc. That said, I do not know the exact costs of these platforms (one of the joys/detriments of being a student using legal technology), but I would guess that each is prohibitively expensive for the average solo or small firm attorney.
+
+So is there a way that lawyers without the resources to use TAR software or hire vendors can harness the power of technology to improve their efficiency and results for clients? In the long-run, the price of e-discovery/document management solutions will likely drop and products will improve and become more user-friendly. But, in the meantime, is there a solution?
+
+I believe there is and it is in the form of open source software. Open source software is software whose source code is available for modification or enhancement by anyone. It is usually free and worked on by large communities of developers working collaboratively to constantly improve the product and offer support to the software’s users. There are a lot of examples of open source software out there (Firefox, Linux, OpenOffice, etc.), but the one that I think has a lot of potential for use in e-discovery is the R Project for Statistical Computing.
+
+# Load requisite packages
+library(tm)
+library(ggplot2)
+library(lsa)
+library(SnowballC)
+
+# Place Enron email snippets into a single vector.
+text <- c(
+    "To Mr. Ken Lay, I’m writing to urge you to donate the millions of dollars you made from selling Enron stock before the company declared bankruptcy.", 
+    "while you netted well over a $100 million, many of Enron's employees were financially devastated when the company declared bankruptcy and their retirement plans were wiped out", 
+    "you sold $101 million worth of Enron stock while aggressively urging the company’s employees to keep buying it", 
+    "This is a reminder of Enron’s Email retention policy. The Email retention policy provides as follows . . .", 
+    "Furthermore, it is against policy to store Email outside of your Outlook Mailbox and/or your Public Folders. Please do not copy Email onto floppy disks, zip disks, CDs or the network.", 
+    "Based on our receipt of various subpoenas, we will be preserving your past and future email. Please be prudent in the circulation of email relating to your work and activities.", 
+    "We have recognized over $550 million of fair value gains on stocks via our swaps with Raptor.", 
+    "The Raptor accounting treatment looks questionable. a. Enron booked a $500 million gain from equity derivatives from a related party.", 
+    "In the third quarter we have a $250 million problem with Raptor 3 if we don’t “enhance” the capital structure of Raptor 3 to commit more ENE shares.")
+view <- factor(rep(c("view 1", "view 2", "view 3"), each = 3))
+df <- data.frame(text, view, stringsAsFactors = FALSE)
+
+# Prepare mini-Enron corpus
+corpus <- Corpus(VectorSource(df$text))
+corpus <- tm_map(corpus, tolower)
+corpus <- tm_map(corpus, removePunctuation)
+corpus <- tm_map(corpus, function(x) removeWords(x, stopwords("english")))
+corpus <- tm_map(corpus, stemDocument, language = "english")
+corpus  # check corpus
+
+# Mini-Enron corpus with 9 text documents
+
+# Compute a term-document matrix that contains occurrance of terms in each email
+# Compute distance between pairs of documents and scale the multidimentional semantic space (MDS) onto two dimensions
+td.mat <- as.matrix(TermDocumentMatrix(corpus))
+dist.mat <- dist(t(as.matrix(td.mat)))
+dist.mat  # check distance matrix
+
+# Compute distance between pairs of documents and scale the multidimentional semantic space onto two dimensions
+fit <- cmdscale(dist.mat, eig = TRUE, k = 2)
+points <- data.frame(x = fit$points[, 1], y = fit$points[, 2])
+ggplot(points, aes(x = x, y = y)) + geom_point(data = points, aes(x = x, y = y, 
+    color = df$view)) + geom_text(data = points, aes(x = x, y = y - 0.2, label = row.names(df)))
+    
+# Results are acceptable. Let's try with Latent Semantic Analysis (LSA).
+    
+# MDS with LSA
+td.mat.lsa <- lw_bintf(td.mat) * gw_idf(td.mat)  # weighting
+lsaSpace <- lsa(td.mat.lsa)  # create LSA space
+dist.mat.lsa <- dist(t(as.textmatrix(lsaSpace)))  # compute distance matrix
+dist.mat.lsa  # check distance mantrix
+
+# MDS
+fit <- cmdscale(dist.mat.lsa, eig = TRUE, k = 2)
+points <- data.frame(x = fit$points[, 1], y = fit$points[, 2])
+ggplot(points, aes(x = x, y = y)) + geom_point(data = points, aes(x = x, y = y, 
+    color = df$view)) + geom_text(data = points, aes(x = x, y = y - 0.2, label = row.names(df)))
