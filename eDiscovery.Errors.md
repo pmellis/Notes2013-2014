@@ -1,5 +1,8 @@
 A Fatal eDiscovery Error
 =========================
+
+####Patrick Ellis
+
 eDiscovery and doc review vendors and software solutions dominated the [LegalTech Trade Show](http://www.legaltechshow.com/r5/cob_page.asp?category_code=ltech) this past week in New York City. While there were a couple of standouts in my mind, most notably [Logikull](http://logikcull.com/), the majority of solutions boasted similar claims rooted in technical concepts. Of course, eDiscovery and document review in the [“Age of Big Data”](http://www.catalystsecure.com/pdfs/Catalyst_Article_IG_and_eDiscovery_in_the_Age_of_Big_Data.pdf) is no simple task and requires a level of technicality that I’m sure is difficult to sum up in a simple pamphlet or trade show display. That said, understanding what’s going on under the hood of vendor tech or software is crucial when making an intelligent choice for your firm or company’s needs.
 
 Today in Legal Analytics, taught by Professor Katz and Professor Bommarito, we discussed some of the metrics that should be considered when selecting an eDiscovery or document review solution powered by machine learning, including precision, recall, accuracy, and the trade-offs in price that alterations in these metrics can yield.
