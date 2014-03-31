@@ -1,5 +1,6 @@
 ###Analyzing the Art of Advocacy: Measuring Simplicity in Oral Argument
 
+####Patrick Ellis
 
 In 2011, Professor Kurt Lash wrote [a short post](http://prawfsblawg.blogs.com/prawfsblawg/2011/05/supreme-court-advocates-the-best-there-ever-was.html) on PrawfsBlawg posing an interesting question:
 
