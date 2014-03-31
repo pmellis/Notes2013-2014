@@ -8,7 +8,7 @@ This quote is often attributed to the science-fiction writer William Gibson, tho
 
 This week, I’ll be going to New York for LegalTech and ReInvent Law. I’m excited for both events. Whether it’s checking out the latest doc review interface or listening to some of the best and brightest legal/entrepreneurial minds discuss new technology, business models, or process improvements, the week will surely be a great, albeit overwhelming experience.
 
-But despite the promise of new, shiny legal products and ideas, I think it’s important to remember that these developments do not always yield distributed benefits. A recent post by Sam Altman discusses technology’s potential as a catalyst of inequality:
+But despite the promise of new, shiny legal products and ideas, I think it’s important to remember that these developments do not always yield distributed benefits. A [recent post](http://blog.samaltman.com/technology-and-wealth-inequality) by Sam Altman discusses technology’s potential as a catalyst of inequality:
 
 > Thanks to technology, people can create more wealth now than ever before, and in twenty years they’ll be able to create more wealth than they can today.  Even though this leads to more total wealth, it skews it toward fewer people.  This disparity has probably been growing since the beginning of technology, in the broadest sense of the word.
 
