@@ -1,0 +1,3 @@
+A Fatal eDiscovery Error
+=========================
+eDiscovery and doc review vendors and software solutions dominated the LegalTech Trade Show this past week in New York City. While there were a couple of standouts in my mind, most notably Logikull, the majority of solutions boasted similar claims rooted in technical concepts. Of course, eDiscovery and document review in the “Age of Big Data” is no simple task and requires a level of technicality that I’m sure is difficult to sum up in a simple pamphlet or trade show display. That said, understanding what’s going on under the hood of vendor tech or software is crucial when making an intelligent choice for your firm or company’s needs.
