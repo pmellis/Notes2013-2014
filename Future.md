@@ -3,7 +3,7 @@ Seeing the Future
 
 ![pic](http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg)
 
-*The future is already here. It’s just not evenly distributed yet.*
+> ####The future is already here. It’s just not evenly distributed yet.
 
 This quote is often attributed to the science-fiction writer William Gibson, though opinions differ on whether and when he first said it. Its meaning is also up for debate. Regardless, Gibson’s quote means something to me and that meaning has lingered in the back of my mind for the past few days.
 
