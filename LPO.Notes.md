@@ -11,10 +11,6 @@ In his presentation, Mr. Goldstein discussed the framework for developing and im
 2. Peace of Mind: How is this safe, compliant with regulatory requirements, privacy concerns, etc.? 
 3. Quality: How can we deliver and ensure a quality product or service? Without these three drivers, your LPO operation is worthless. 
 
-###Fear of Change?
-
-Whether out of a fear of change, the unknown, or competition, large, U.S. law firms (Big Law) were the most resistant to LPO before the ABA gave its stamp of approval in 2008. I imagine they still are.
-
 ###Why India?
 
 Pangea3 outsources to India because, among other things, the Indian legal system is based on common law. Therefore, the Indian attorneys and employees approach legal issues and problems the same way U.S.- and British-trained lawyers do. The Indian code of legal ethics is also very similar, particularly with regards to confidentiality. In addition, India has approximately 1 million lawyers, with 100,000 in Mumbai (Pangea3′s Indian HQ). By outsourcing to India, Pangea3 is able to overcome scalability and quality problems because of the sheer number and quality of lawyers. According to Mr. Goldstein, some of India’s top law grads line-up to work for Pangea3. I also believe India’s relative political stability and strong tech infrastructure make India the ideal choice for an LPO.
