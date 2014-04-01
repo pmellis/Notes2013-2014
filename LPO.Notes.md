@@ -1,7 +1,7 @@
 Notes on LPO
 =============
 
-At our ReInvent Law Lab meeting tonight, we had Jonathan Goldstein, formerly of Pangea3, call in and discuss the ethics of legal process outsourcing. Some takeaways that I found particularly interesting:
+At our [ReInvent Law Lab](http://reinventlaw.com/) meeting tonight, we had Jonathan Goldstein, formerly of [Pangea3](http://www.pangea3.com/), call in and discuss the ethics of legal process outsourcing. Some takeaways that I found particularly interesting:
 
 ###An LPO Framework
 
