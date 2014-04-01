@@ -1,1 +1,1 @@
-####A selection of blogs from Patrick Ellis' [site.](http://patellis.wordpress.com/)
+####Patrick Ellis' notes on law + tech (2013 - 2014)
