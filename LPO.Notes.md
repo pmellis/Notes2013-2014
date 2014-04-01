@@ -1,15 +1,17 @@
 Notes on LPO
 =============
 
+![pic](http://iliketowastemytime.com/sites/default/files/mumbai-central.jpg)
+
 At our [ReInvent Law Lab](http://reinventlaw.com/) meeting tonight, we had Jonathan Goldstein, formerly of [Pangea3](http://www.pangea3.com/), call in and discuss the ethics of legal process outsourcing. Some takeaways that I found particularly interesting:
 
 ###An LPO Framework
 
 In his presentation, Mr. Goldstein discussed the framework for developing and implementing an LPO provider, which can be summed up in three ideals:
 
-1. Value: How will LPO add value to the client’s organization (efficiency, savings, innovation, etc.)?
-2. Peace of Mind: How is this safe, compliant with regulatory requirements, privacy concerns, etc.? 
-3. Quality: How can we deliver and ensure a quality product or service? Without these three drivers, your LPO operation is worthless. 
+1. **Value**: How will LPO add value to the client’s organization (efficiency, savings, innovation, etc.)?
+2. **Peace of Mind**: How is this safe, compliant with regulatory requirements, privacy concerns, etc.? 
+3. **Quality**: How can we deliver and ensure a quality product or service? Without these three drivers, your LPO operation is worthless. 
 
 ###Why India?
 
