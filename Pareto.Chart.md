@@ -18,6 +18,9 @@ Pareto chart analysis for Appellate_Disposition
 
 ![pic](http://patellis.files.wordpress.com/2014/04/rplot.png)
 
+You can also add a line at the 80% mark for 80-20 analysis.
 ```{r}
 abline(h=(sum(Appellate_Disposition)*.8),col="blue",lwd=1) 
 ```
+
+![pic](http://patellis.files.wordpress.com/2014/04/rplot01.png)
