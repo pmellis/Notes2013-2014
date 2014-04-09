@@ -3,11 +3,9 @@ Administrative Law
 
 ###I. Threshold Questions
 
-```
-Is there **standing**?
-```
-```
-```
+A. Is there **standing**?
+  1. Is there Article III standing?
+
 
 ###II. Judicial Review
 
